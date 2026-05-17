@@ -1,82 +1,126 @@
+<div align="center">
+
+<img src="https://aventeninnovations.com/board-green-front.png" alt="Aventen Kypros — front" width="600"/>
+
 # Aventen Kypros
 
-> **The world's first Arduino-compatible board with WiFi 6, Gigabit Ethernet, HDMI output, and 802.15.4 — all on a board smaller than a Raspberry Pi Zero.**
+### The most powerful Arduino-compatible board ever made.
 
-![Aventen Kypros](board-hero.png)
+Dual-core 1GHz. WiFi 6. HDMI out. Camera in. Gigabit Ethernet. Thread & Zigbee. Audio codec. LiPo power. GPU-accelerated graphics. Edge AI. All on a board smaller than a Raspberry Pi Zero.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Arduino Compatible](https://img.shields.io/badge/Arduino-Compatible-teal.svg)](https://arduino.cc)
-[![Status: Coming Soon](https://img.shields.io/badge/Status-Coming%20Soon-orange.svg)](https://aventeninnovations.com)
+[![Join Waitlist](https://img.shields.io/badge/Join%20Waitlist-aventeninnovations.com-blueviolet?style=for-the-badge)](https://aventeninnovations.com/#waitlist)
+[![Status](https://img.shields.io/badge/Status-In%20Development%202026-orange?style=for-the-badge)](https://aventeninnovations.com)
+[![Crowd Supply](https://img.shields.io/badge/Crowd%20Supply-Coming%20Soon-green?style=for-the-badge)](https://www.crowdsupply.com/aventen/aventen-formosa-sync)
+[![Built in Britain](https://img.shields.io/badge/Built%20in%20Britain-🇬🇧-red?style=for-the-badge)](#)
 
----
-
-## What Is Kypros?
-
-Kypros is a next-generation development board built on the **NXP MIMXRT1176** — the most powerful Cortex-M microcontroller ever made. It is fully Arduino IDE compatible, supports FreeRTOS and NXP MCUXpresso SDK, and is designed to be the last board you ever need to buy.
-
-Nobody else has built an Arduino board on the RT1176. Kypros is first.
+</div>
 
 ---
 
-## Specifications
+## At a Glance
 
-| Feature | Detail |
+| | |
 |---|---|
-| **MCU** | NXP MIMXRT1176DVMAB |
-| **Architecture** | Dual-core: Cortex-M7 @ 1GHz + Cortex-M4 @ 400MHz |
-| **RAM** | 2MB on-chip SRAM |
-| **PSRAM** | 8MB APS6404L (QPI) |
-| **Flash** | 16MB W25Q128JVPIQ |
-| **Storage** | MicroSD card slot (SDXC — up to 2TB) |
-| **WiFi** | WiFi 6 (802.11ax) — Murata Type 2EL |
-| **Bluetooth** | Bluetooth 5.3 — Murata Type 2EL |
-| **802.15.4** | Thread / Matter / Zigbee — Murata Type 2EL |
-| **Ethernet** | Gigabit (RTL8211E PHY + RJ45 breakout header) |
-| **HDMI** | 1080p @ 60fps via ADV7535 HDMI bridge (Micro HDMI) |
-| **Display** | MIPI DSI 2-lane (header) |
-| **Camera** | MIPI CSI 2-lane (FPC connector) |
-| **Audio** | SGTL5000 stereo codec (98dB SNR) + IMP23ABSU MEMS mic |
-| **USB** | USB-C (OTG — host + device) |
-| **GPIO** | Standard 2.54mm headers, both long edges |
-| **CAN** | CAN-FD |
-| **Battery** | LiPo JST connector + onboard charging |
-| **Dimensions** | 69mm × 18mm |
-| **Price** | £199.99 |
+| **CPU** | NXP MIMXRT1176DVMAB — Cortex-M7 @ 1GHz + Cortex-M4F @ 400MHz |
+| **RAM** | 2MB on-chip SRAM + 8MB PSRAM (APS6404L, QSPI 133MHz) |
+| **Flash** | 16MB NOR Flash (W25Q128JVPIQ) + MicroSD (up to 2TB) |
+| **Wireless** | Murata Type 2EL — WiFi 6 (802.11ax, 601Mbps) + BT 5.3 + Zigbee + Thread + Matter |
+| **Ethernet** | RTL8211E — Gigabit 10/100/1000Mbps |
+| **HDMI** | 1080p @ 60fps via ADV7535 MIPI-to-HDMI bridge — Micro HDMI (Type D) |
+| **Camera** | MIPI CSI-2 2-lane FPC connector — on-board |
+| **Audio** | SGTL5000 stereo codec, 98dB SNR + IMP23ABSU ultrasonic MEMS mic (80kHz) |
+| **USB** | USB-C OTG (power + data + programming) + USB 2.0 host header |
+| **GPIO** | Dual-row headers — SPI, I²C, UART, CAN-FD, PWM, ADC — 3.3V logic |
+| **Power** | LiPo JST connector + USB-C charging + RTC backup |
+| **Debug** | SWD/JTAG header — J-Link, ST-Link, CMSIS-DAP |
+| **Form Factor** | 69 × 18mm — 8-layer HDI PCB |
+| **IDE Support** | Arduino IDE (official board package) · PlatformIO · MCUXpresso |
+| **Price** | £199.99 / ~$266 |
+
+---
+
+## Gallery
+
+<div align="center">
+
+| Front | Back |
+|---|---|
+| <img src="https://aventeninnovations.com/board-front.png" width="350"/> | <img src="https://aventeninnovations.com/board-back.png" width="350"/> |
+
+| PCB Layout | 3D Render |
+|---|---|
+| <img src="https://aventeninnovations.com/pcb-layout.png" width="350"/> | <img src="https://aventeninnovations.com/board-green-back.png" width="350"/> |
+
+</div>
 
 ---
 
 ## Why Kypros?
 
-### vs Teensy 4.1
-Teensy 4.1 is a great board. But it has no WiFi, no Bluetooth, no Ethernet, no HDMI, and no 802.15.4. Kypros has all of these at 1GHz on a smaller board.
+### ⚡ Dual-Core Powerhouse
+Cortex-M7 @ 1GHz + Cortex-M4F @ 400MHz. Run your application on M7 and real-time control on M4 — simultaneously. Both cores share memory but operate independently. No other Arduino board comes close.
 
-### vs Arduino Portenta X8
-Portenta X8 runs Linux and needs a carrier board to do anything useful. Kypros is instant-on like a microcontroller, Arduino IDE compatible out of the box, and £35 cheaper.
+### 📡 Six Radios on One Board
+WiFi 6 (802.11ax) at 601Mbps, Bluetooth 5.3, and 802.15.4 for Zigbee, Thread, and Matter mesh networks — all at the same time. Via Murata Type 2EL (IW612 tri-radio combo).
 
-### vs ESP32
-ESP32 is WiFi 4, single-core-class performance, no HDMI, no Gigabit, no 802.15.4. Kypros is in a different league.
+### 🖥️ Native HDMI Output
+1080p @ 60fps via micro HDMI. The **only Arduino-compatible board with native HDMI output.** Build dashboards, kiosks, game consoles, or instrument clusters. Plug into any monitor or TV. No adapter. No shield.
 
-### The Real Story
-We built [Formosa Sync](https://github.com/avencan/Aventen-Formosa-Sync) on RT1060. Then we asked: *what if we used the chip nobody else has touched yet, threw out every compromise, and built something genuinely new?*
+### 📷 Camera Input
+MIPI CSI-2 2-lane FPC connector directly on board. Run computer vision, object detection, QR scanning, or video preview — all processed on-chip with 8MB PSRAM for frame buffers.
 
-The RT1176 is the most powerful Cortex-M chip on the market. No Arduino board uses it. Kypros is first.
+### 🎵 Studio-Grade Audio
+SGTL5000 codec, 98dB SNR, headphone amp, line in/out. Plus IMP23ABSU ultrasonic MEMS mic up to 80kHz. Build synthesisers, effects pedals, bat detectors, or voice assistants.
+
+### 🌐 Gigabit Ethernet
+RTL8211E PHY — 10/100/1000Mbps. Full Gigabit networking. 10× faster than Teensy 4.1's 100Mbps.
+
+### 🔋 Battery-Native
+LiPo connector + charging circuit + RTC backup. Designed for portable from day one. Charge via USB-C, run on battery, wake from RTC alarm. No power management shield required.
+
+### 🧠 Edge AI Ready
+TensorFlow Lite Micro + NXP eIQ + 2D VGLite GPU at 500MHz. Run ML models on-device — image classification, keyword spotting, anomaly detection. Hardware-accelerated graphics.
 
 ---
 
-## What Can You Build?
+## Nothing Else Comes Close
 
-- 🎮 **Retro gaming console** — HDMI out + USB/BT gamepad + SD card full of ROMs
-- 🖥️ **Wireless desktop computer** — HDMI monitor + BT keyboard + BT mouse
-- 🔒 **Privacy-first security camera** — MIPI camera + 1TB SD + local AI person detection. No cloud. No China.
-- 🚁 **Autonomous drone** — M4 handles stabilisation, M7 handles navigation + vision AI
-- 🏠 **Smart home hub** — 802.15.4 mesh + WiFi 6 + "Hey Aventen" wake word. No subscription.
-- 🌐 **Programmable WiFi 6 router / network gateway** — WiFi 6 + Gigabit Ethernet
-- 🤖 **Robot brain** — CAN-FD + camera + WiFi telemetry + dual-core real-time control
-- 📡 **IoT gateway** — bridge 802.15.4 mesh sensors to WiFi 6 / Gigabit cloud
-- 🔊 **AI voice assistant** — wake word on M4 (private, on-device) → complex AI over WiFi 6
-- 🏭 **Industrial controller** — CAN-FD + Ethernet + real-time M4 + deterministic RTOS
-- 📸 **AI dashcam** — CSI camera + SD recording + WiFi upload + on-device detection
-- 📟 **Wearable / handheld** — MIPI display + BT + battery + ultra-low-power M4
+|  | **KYPROS** | Teensy 4.1 | ESP32-S3 | ESP32-P4 | Arduino UNO R4 | Pi Pico 2W | Pi Zero 2W | Portenta H7 |
+|---|---|---|---|---|---|---|---|---|
+| **CPU Speed** | **1GHz + 400MHz** | 600MHz | 240MHz | 400MHz | 48MHz | 150MHz | 1GHz (Linux) | 480MHz |
+| **RAM / Memory** | **8MB PSRAM + 16MB Flash** | 16MB opt | 2–8MB | 768KB | 32KB | 520KB | 512MB LPDDR2 | 8MB SDRAM |
+| **WiFi** | ✅ **WiFi 6** | ❌ | WiFi 4 | ❌ | WiFi 4 | WiFi 4 | WiFi 4 | WiFi 4 |
+| **Bluetooth** | ✅ **BT 5.3** | ❌ | BT 5.0 | ❌ | BT 5.0 | BT 5.2 | BT 4.2 | BT 5.1 |
+| **Zigbee / Thread / Matter** | ✅ **Native** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **HDMI Output** | ✅ **1080p** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ (Linux) | ❌ adapter |
+| **Camera (CSI)** | ✅ **On-board** | ❌ | USB only | ✅ MIPI | ❌ | ❌ | ✅ (Linux) | ❌ shield |
+| **Ethernet** | ✅ **Gigabit** | ✅ 100Mbps | ❌ | ❌ | ❌ | ❌ | ❌ USB only | ❌ shield |
+| **Audio Codec** | ✅ **SGTL5000** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **LiPo Native** | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **GPU / Accelerator** | ✅ **VGLite 500MHz** | ❌ | ❌ | ✅ basic | ❌ | ❌ | ✅ VideoCore | ❌ |
+| **Arduino IDE** | ✅ **Board package** | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |
+| **Form Factor** | **69×18mm** | 61×18mm | varies | varies | 68×53mm | 51×21mm | 65×30mm | 66×25mm |
+| **Price** | **£199.99** | ~£35 | ~£6 | ~£30–45 | ~£27 | ~£6 | ~£15 | ~£80 |
+
+> Kypros is the only Arduino-compatible board with WiFi 6, HDMI 1080p output, native Zigbee/Thread/Matter, Gigabit Ethernet, on-board audio codec, and LiPo battery charging — all in one ready-to-use 69×18mm form factor. No shields. No carrier boards. No compromises.
+
+---
+
+## What Will You Build?
+
+| 🏠 Smart Home Hub | 🤖 Robotics & Vision | 🎵 Audio & Synthesis |
+|---|---|---|
+| WiFi 6 + BT + Zigbee + Thread + Matter. Run every smart home protocol natively. No Pi, no dongles. | Camera CSI + 1GHz + real-time M4. Run CV on M7 and motor control on M4 simultaneously. | SGTL5000 stereo codec + 80kHz ultrasonic mic + MicroSD. Synthesisers, audio processors, bat detectors. |
+
+| 📊 Industrial IoT | 🎮 Gaming Console | 🔒 Security Camera |
+|---|---|---|
+| CAN-FD + Gigabit Ethernet + WiFi 6 + battery backup. Edge compute nodes with 1GHz real-time. | Retro gaming via HDMI + USB gamepad + SD card ROMs. NES/SNES/GBA/PSP. | MIPI camera + 1TB SD card + WiFi 6. 24/7 local recording with motion detection. 100% private — no cloud. |
+
+| 🚁 Drone & UAV | 🔬 Ultrasonic Sensing | 🖥️ Desktop Computer |
+|---|---|---|
+| 802.15.4 swarm mesh + real-time M4 flight controller + WiFi 6 telemetry. | 80kHz MEMS mic + dual-core. Bat detectors, ultrasonic rangefinders, structural health. | Kypros + HDMI + USB keyboard/mouse + WiFi 6. A real computer in 69×18mm. |
+
+👉 **[Explore all 100+ use cases →](https://aventeninnovations.com/use-cases.html)**
 
 ---
 
@@ -84,61 +128,129 @@ The RT1176 is the most powerful Cortex-M chip on the market. No Arduino board us
 
 Kypros supports three levels of development:
 
-| Level | Environment | Who it's for |
+| Layer | Platform | Best for |
 |---|---|---|
-| 🟢 Arduino IDE | `digitalWrite()`, `WiFi.h`, drag-and-drop UF2 | Beginners, makers |
-| 🟡 Aventen SDK | FreeRTOS, full hardware APIs, dual-core | Intermediate developers |
-| 🔴 NXP MCUXpresso SDK | Bare metal, maximum control | Professional / production |
+| 🟢 Beginner | **Arduino IDE** — official board package | Simple sketches, learning, drag-and-drop UF2 |
+| 🟡 Intermediate | **Aventen SDK** — FreeRTOS + full API | Custom firmware, real-time apps |
+| 🔴 Advanced | **NXP MCUXpresso SDK** — bare metal | Production firmware, maximum control |
 
-### Arduino Core
-The Kypros Arduino Core (`aventen/kypros`) provides:
-- Full `digitalWrite()`, `analogRead()`, `Serial`, `Wire`, `SPI`
-- `WiFi.h` — WiFi 6 via Murata 2EL over SDIO
-- `KyprosBLE.h` — Bluetooth 5.3
-- `KyprosMesh.h` — 802.15.4 / Thread / Matter
-- UF2 drag-and-drop flashing — no JTAG needed
+```cpp
+// It really is this simple
+#include <WiFi.h>
 
-### Board Manager
+void setup() {
+  WiFi.begin("MyNetwork", "password");
+  while (WiFi.status() != WL_CONNECTED) delay(500);
+  Serial.println("Connected on WiFi 6 — " + WiFi.localIP().toString());
+}
 ```
-https://aventeninnovations.com/package_aventen_index.json
-```
-*(Coming soon)*
+
+---
+
+## Specs Deep Dive
+
+<details>
+<summary><b>Processor</b></summary>
+
+| Parameter | Value |
+|---|---|
+| SoC | NXP MIMXRT1176DVMAB |
+| Primary Core | ARM Cortex-M7 @ 1 GHz |
+| Secondary Core | ARM Cortex-M4F @ 400 MHz |
+| Architecture | Dual-core asymmetric multiprocessing |
+| FPU | Double-precision (M7) + Single-precision (M4) |
+| DSP | Hardware DSP instructions on both cores |
+| GPU | 2D VGLite — 500MHz hardware pixel pipeline |
+| Internal SRAM | 2 MB on-chip |
+
+</details>
+
+<details>
+<summary><b>Memory</b></summary>
+
+| Parameter | Value |
+|---|---|
+| PSRAM | APS6404L-3SQR-ZR — 8MB, QSPI 133MHz |
+| Flash | W25Q128JVPIQ — 16MB NOR, QSPI 133MHz, XIP |
+| Internal SRAM | 2 MB on-chip |
+| MicroSD | SDIO interface — up to 2TB |
+
+</details>
+
+<details>
+<summary><b>Wireless — Murata LBES5PL2EL-923 (Type 2EL)</b></summary>
+
+| Parameter | Value |
+|---|---|
+| Chipset | NXP IW612 tri-radio combo |
+| WiFi | 802.11a/b/g/n/ac/ax (WiFi 6), dual-band 2.4 + 5 GHz |
+| WiFi Speed | Up to 601 Mbps (MCS11, 80MHz channel) |
+| TX Power | 18 dBm |
+| Bluetooth | BT 5.3 BR/EDR/LE |
+| 802.15.4 | Zigbee, Thread, Matter — native |
+| Host Interface | SDIO (WiFi), UART (BT), SPI (802.15.4) |
+| Antenna | Kyocera AVX M830520 tri-band + U.FL port |
+
+</details>
+
+<details>
+<summary><b>Audio</b></summary>
+
+| Parameter | Value |
+|---|---|
+| Codec | NXP SGTL5000XNLA3 |
+| SNR | 98 dB |
+| Sample Rate | Up to 96 kHz |
+| Outputs | Line-out stereo + headphone amp |
+| Inputs | Line-in stereo + mic-in |
+| Ultrasonic Mic | ST IMP23ABSU — 35Hz–80kHz, 64dB SNR |
+
+</details>
 
 ---
 
 ## Open Source
 
-Kypros follows the **Raspberry Pi model** of open source:
-
-- ✅ **Schematic PDF** — publicly available
-- ✅ **Arduino Core** — fully open source (MIT)
-- ✅ **Aventen SDK** — fully open source
-- ❌ **KiCad source files** — private (competitive IP)
-- ❌ **Gerber files** — private
-
----
-
-## Links
-
-- 🌐 Website: https://aventeninnovations.com
-- 🛒 Crowd Supply (waitlist): https://www.crowdsupply.com/aventen/aventen-formosa-sync
-- 📰 Press (Formosa Sync): https://www.hackster.io/news/aventen-formosa-sync-is-a-high-performance-dev-board-running-up-to-1-ghz-f2581d62fd3c
-- 📧 Contact: val.fidanci@aventen.co
+Kypros follows the **Raspberry Pi model**:
+- ✅ Schematic PDF — publicly available
+- ✅ Arduino Core — open source
+- ✅ All libraries — open source
+- 🔒 KiCad source files — private (competitive advantage)
+- 🔒 Gerber files — shared only with licensed fab (PCBWay)
 
 ---
 
 ## Status
 
-> 🔶 **Pre-production** — hardware in final design review. Software development in progress. Join the waitlist at [aventeninnovations.com](https://aventeninnovations.com) to be first to know when Kypros launches.
+| Milestone | Status |
+|---|---|
+| Schematic design | ✅ Complete |
+| PCB layout | 🔄 In progress |
+| Prototype fabrication | 📅 Planned Q3 2026 |
+| Arduino Core development | 🔄 In progress |
+| Pre-orders / waitlist | ✅ Open |
 
 ---
 
-## About Aventen
+## Links
 
-Aventen Innovations Ltd is a British hardware company building the next generation of maker development boards. Founded by Valentino Fidanci.
-
-*Built in Britain. 🇬🇧*
+| | |
+|---|---|
+| 🌐 **Website** | [aventeninnovations.com](https://aventeninnovations.com) |
+| 📋 **Waitlist** | [aventeninnovations.com/#waitlist](https://aventeninnovations.com/#waitlist) |
+| 🛒 **Crowd Supply** | [crowdsupply.com/aventen/aventen-formosa-sync](https://www.crowdsupply.com/aventen/aventen-formosa-sync) |
+| 📰 **Hackster.io** | [Aventen covered on Hackster](https://www.hackster.io/news/aventen-formosa-sync-is-a-high-performance-dev-board-running-up-to-1-ghz-f2581d62fd3c) |
+| 💬 **Contact** | [hello@aventeninnovations.com](mailto:hello@aventeninnovations.com) |
+| 🏠 **Previous board** | [Aventen-Formosa-Sync](https://github.com/avencan/Aventen-Formosa-Sync) |
 
 ---
 
-*© 2026 Aventen Innovations Ltd — MIT Licence*
+<div align="center">
+
+**Built in Britain 🇬🇧 — Loved everywhere.**
+
+*Aventen Innovations Ltd — Eastbourne, UK*
+
+© 2026 Aventen Innovations Ltd · [aventeninnovations.com](https://aventeninnovations.com)
+
+</div>
