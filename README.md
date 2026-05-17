@@ -124,6 +124,21 @@ TensorFlow Lite Micro + NXP eIQ + 2D VGLite GPU at 500MHz. Run ML models on-devi
 
 ---
 
+## Overclocking
+
+Kypros is designed to run at **1GHz stock** — already faster than a fully overclocked Formosa Sync. But the RT1176 can go further.
+
+| Mode | M7 Clock | M4 Clock | Notes |
+|---|---|---|---|
+| **Stock** | 1.0 GHz | 400 MHz | Default — stable, cool, tested |
+| **Overclocked** | **up to 1.4 GHz** | up to 600 MHz | Community-tested, silicon lottery applies |
+
+> ⚠️ Overclocking is unsupported and voids warranty. It requires bumping core voltage and adequate thermal management. Results vary per unit.
+
+Formosa Sync needed overclocking to hit 1GHz. Kypros does 1GHz in its sleep — then keeps going.
+
+---
+
 ## Software
 
 Kypros supports three levels of development:
