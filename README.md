@@ -28,7 +28,7 @@ Dual-core 1GHz. WiFi 6. HDMI out. Camera in. Gigabit Ethernet. Thread & Zigbee. 
 | **Ethernet** | RTL8211E — Gigabit 10/100/1000Mbps |
 | **HDMI** | 1080p @ 60fps via ADV7535 MIPI-to-HDMI bridge — Micro HDMI (Type D) |
 | **Camera** | MIPI CSI-2 2-lane FPC connector — on-board |
-| **Audio** | SGTL5000 stereo codec, 98dB SNR + IMP23ABSU ultrasonic MEMS mic (80kHz) |
+| **Audio** | SGTL5000 stereo codec, 98dB SNR |
 | **USB** | USB-C OTG (power + data + programming) + USB 2.0 host header |
 | **GPIO** | Dual-row headers — SPI, I²C, UART, CAN-FD, PWM, ADC — 3.3V logic |
 | **Power** | LiPo JST connector + USB-C charging + RTC backup |
@@ -70,7 +70,7 @@ WiFi 6 (802.11ax) at 601Mbps, Bluetooth 5.3, and 802.15.4 for Zigbee, Thread, an
 MIPI CSI-2 2-lane FPC connector directly on board. Run computer vision, object detection, QR scanning, or video preview — all processed on-chip with 8MB PSRAM for frame buffers.
 
 ### 🎵 Studio-Grade Audio
-SGTL5000 codec, 98dB SNR, headphone amp, line in/out. Plus IMP23ABSU ultrasonic MEMS mic up to 80kHz. Build synthesisers, effects pedals, bat detectors, or voice assistants.
+SGTL5000 codec, 98dB SNR, headphone amp, line in/out. Build synthesisers, effects pedals, or voice assistants.
 
 ### 🌐 Gigabit Ethernet
 RTL8211E PHY — 10/100/1000Mbps. Full Gigabit networking. 10× faster than Teensy 4.1's 100Mbps.
@@ -84,6 +84,28 @@ TensorFlow Lite Micro + NXP eIQ + 2D VGLite GPU at 500MHz. Run ML models on-devi
 ---
 
 ## Nothing Else Comes Close
+
+### vs. Premium & Industrial Boards
+
+|  | **KYPROS** | Arduino Portenta X8 | BeagleBone AI-64 | NVIDIA Jetson Orin Nano |
+|---|---|---|---|---|
+| **CPU** | **M7 @ 1GHz + M4 @ 400MHz** | A7 @ 800MHz + M7 + M4 | Dual A72 @ 2GHz + R5F | 6-core A78AE @ 1.5GHz |
+| **RAM** | **8MB PSRAM + 2MB SRAM** | 512MB LPDDR4 | 2GB LPDDR4 | 4GB LPDDR5 |
+| **WiFi** | ✅ **WiFi 6** | WiFi 5 | WiFi 5 | ❌ (M.2 add-on) |
+| **Bluetooth** | ✅ **BT 5.3** | BT 5.1 | BT 5.0 | ❌ |
+| **Zigbee / Thread / Matter** | ✅ **Native** | ❌ | ❌ | ❌ |
+| **HDMI Output** | ✅ **1080p — built-in** | ❌ shield required | ❌ | ✅ via adapter |
+| **Gigabit Ethernet** | ✅ **Built-in** | ❌ shield required | ✅ Dual GbE | ✅ |
+| **Audio Codec** | ✅ **SGTL5000** | ❌ | ❌ | ❌ |
+| **LiPo Native** | ✅ | ❌ | ❌ | ❌ |
+| **Arduino IDE** | ✅ **Board package** | ✅ | ❌ | ❌ |
+| **Real-Time OS** | ✅ **FreeRTOS (bare-metal)** | Linux + M4 RTOS | Linux only | Linux only |
+| **Form Factor** | **69×18mm** | 66×25mm | 87×54mm | Module + carrier board |
+| **Price** | **£199.99** | ~£175 | ~£140 | ~£375 (dev kit) |
+
+> Kypros costs **less** than a Jetson Orin Nano dev kit, **similar** to a Portenta X8 — but adds WiFi 6, BT 5.3, Thread/Matter, native HDMI, audio codec, LiPo charging, and Arduino IDE support that none of them have.
+
+### vs. Maker Boards
 
 |  | **KYPROS** | Teensy 4.1 | ESP32-S3 | ESP32-P4 | Arduino UNO R4 | Pi Pico 2W | Pi Zero 2W | Portenta H7 |
 |---|---|---|---|---|---|---|---|---|
@@ -110,15 +132,15 @@ TensorFlow Lite Micro + NXP eIQ + 2D VGLite GPU at 500MHz. Run ML models on-devi
 
 | 🏠 Smart Home Hub | 🤖 Robotics & Vision | 🎵 Audio & Synthesis |
 |---|---|---|
-| WiFi 6 + BT + Zigbee + Thread + Matter. Run every smart home protocol natively. No Pi, no dongles. | Camera CSI + 1GHz + real-time M4. Run CV on M7 and motor control on M4 simultaneously. | SGTL5000 stereo codec + 80kHz ultrasonic mic + MicroSD. Synthesisers, audio processors, bat detectors. |
+| WiFi 6 + BT + Zigbee + Thread + Matter. Run every smart home protocol natively. No Pi, no dongles. | Camera CSI + 1GHz + real-time M4. Run CV on M7 and motor control on M4 simultaneously. | SGTL5000 stereo codec + MicroSD. Synthesisers, audio processors, and voice assistants. |
 
 | 📊 Industrial IoT | 🎮 Gaming Console | 🔒 Security Camera |
 |---|---|---|
 | CAN-FD + Gigabit Ethernet + WiFi 6 + battery backup. Edge compute nodes with 1GHz real-time. | Retro gaming via HDMI + USB gamepad + SD card ROMs. NES/SNES/GBA/PSP. | MIPI camera + 1TB SD card + WiFi 6. 24/7 local recording with motion detection. 100% private — no cloud. |
 
-| 🚁 Drone & UAV | 🔬 Ultrasonic Sensing | 🖥️ Desktop Computer |
+| 🚁 Drone & UAV | 📡 Mesh Networking | 🖥️ Desktop Terminal |
 |---|---|---|
-| 802.15.4 swarm mesh + real-time M4 flight controller + WiFi 6 telemetry. | 80kHz MEMS mic + dual-core. Bat detectors, ultrasonic rangefinders, structural health. | Kypros + HDMI + USB keyboard/mouse + WiFi 6. A real computer in 69×18mm. |
+| 802.15.4 swarm mesh + real-time M4 flight controller + WiFi 6 telemetry. | Thread + Matter + BT 5.3 mesh. Build infrastructure that talks to everything. | Kypros + HDMI + USB keyboard/mouse + WiFi 6. A real computer in 69×18mm. |
 
 👉 **[Explore all 100+ use cases →](https://aventeninnovations.com/use-cases.html)**
 
@@ -218,7 +240,6 @@ void setup() {
 | Sample Rate | Up to 96 kHz |
 | Outputs | Line-out stereo + headphone amp |
 | Inputs | Line-in stereo + mic-in |
-| Ultrasonic Mic | ST IMP23ABSU — 35Hz–80kHz, 64dB SNR |
 
 </details>
 
